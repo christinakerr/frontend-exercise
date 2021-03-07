@@ -2,7 +2,7 @@ import React from 'react'
 
 function AddEdit() {
     return (
-        <div>Add/Edit</div>
+        <main>Add/Edit</main>
     );
 }
 
