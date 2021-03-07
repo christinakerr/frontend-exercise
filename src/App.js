@@ -1,17 +1,17 @@
 import React from "react";
 import {BrowserRouter, Switch, Route} from "react-router-dom";
 import Header from "./components/Header"
-import Listings from "./pages/Listings";
-import AddEdit from "./pages/AddEdit"
+import Container from "./pages/Container";
 
 function App() {
+
   return (
     <BrowserRouter>
       <Header />
       <Switch>
-        <Route exact path="/" component={Listings} />
-        <Route exact path="/edit" component={AddEdit} />
-        <Route exact path="/add" component={AddEdit} />
+        <Route exact path="/" component={Container} />
+        <Route exact path="/edit" component={Container} />
+        <Route exact path="/add" component={Container} />
       </Switch>
     </BrowserRouter>
   );
