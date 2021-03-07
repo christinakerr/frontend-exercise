@@ -2,7 +2,8 @@ import React from 'react'
 import Button from "../components/Button"
 import Job from "../components/Job";
 
-function Listings() {
+function Listings(props) {
+    console.log(props);
     return (
         <main>
             <h1>Jobs</h1>
@@ -13,8 +14,11 @@ function Listings() {
             <div>Posted</div>
             <div>Sponsorship</div>
             <div>Status</div>
-            
-            <Job title="Product Manager" location="Austin, TX" posted="10/04/2020" sponsorship="free" status="open"/>
+            {
+                props.jobs.map(job => {
+                    return <Job title={job.title} location={job.location} posted={job.posted} sponsorship={job.sponsorship} status={job.status} />
+                })
+            }
         </main>
     );
 }

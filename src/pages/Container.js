@@ -33,7 +33,7 @@ function Container( props ) {
     const url = props.location.pathname;
 
     if (url === "/"){
-        return <Listings />
+        return <Listings jobs={ jobs }/>
     } else if (url === "/add" || url === "/edit"){
         return <AddEdit />
     } else {
