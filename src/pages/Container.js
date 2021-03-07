@@ -11,21 +11,24 @@ function Container( props ) {
                 location: "Austin, TX",
                 posted: "10/04/2020",
                 sponsorship: "Free",
-                status: "Open"
+                status: "Open",
+                key: 1
             },
             {
                 title: "CEO",
                 location: "Austin, TX",
                 posted: "12/30/2020",
                 sponsorship: "Sponsored",
-                status: "Paused"
+                status: "Paused",
+                key: 2
             },
             {
                 title: "Software Engineer",
                 location: "Seattle, WA",
                 posted: "11/18/2020",
                 sponsorship: "Free",
-                status: "Closed"
+                status: "Closed",
+                key: 3
             }
         ]
     )
