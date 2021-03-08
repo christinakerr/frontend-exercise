@@ -56,17 +56,17 @@ function AddEdit(props) {
                         <p>Do you want to promote this job?</p>
                     </label>
                     <select id="sponsorship" name="sponsorship">
-                        <option value="free">Free</option>
-                        <option value="sponsored">Sponsored</option>
+                        <option value="Free">Free</option>
+                        <option value="Sponsored">Sponsored</option>
                     </select>
                     <label htmlFor="status">
                         <h4>Status</h4>
                         <p>Are you ready to make this job listing public?</p>
                     </label>
                     <select id="status" name="status">
-                        <option value="open">Open</option>
-                        <option value="paused">Paused</option>
-                        <option value="closed">Closed</option>
+                        <option value="Open">Open</option>
+                        <option value="Paused">Paused</option>
+                        <option value="Closed">Closed</option>
                     </select>
                     <br />
                     <Link to="/"><input type="submit" value="Submit" onClick={submitJob}></input></Link>
