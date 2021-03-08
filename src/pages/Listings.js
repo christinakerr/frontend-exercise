@@ -4,12 +4,11 @@ import Job from "../components/Job";
 import { Link } from "react-router-dom"
 
 function Listings(props) {
-    console.log(props);
-
+    
     return (
         <main>
             <h1>Jobs</h1>
-            <p>3 listings</p>
+            <p>{props.jobs.length} listings</p>
             <Link to="/add"><Button>Add Job</Button></Link>
 
             <div>Job Title</div>
