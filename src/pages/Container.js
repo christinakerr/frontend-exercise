@@ -35,7 +35,7 @@ function Container( props ) {
     )
 
     function addJob(job){
-        setJobs(jobs.push(job));
+        setJobs(jobs.concat(job));
         console.log(jobs);
         props.history.push("/")
     }

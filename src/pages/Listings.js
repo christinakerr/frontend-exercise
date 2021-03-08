@@ -4,6 +4,7 @@ import Job from "../components/Job";
 import { Link } from "react-router-dom"
 
 function Listings(props) {
+    console.log(props);
 
     return (
         <main>
