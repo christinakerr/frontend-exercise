@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import Listings from "./Listings";
 import AddEdit from "./AddEdit";
 import NotFound from "./NotFound"
+import shortid from "shortid"
 
 function Container( props ) {
     const [jobs, setJobs] = useState(
@@ -12,7 +13,7 @@ function Container( props ) {
                 posted: "10/04/2020",
                 sponsorship: "Free",
                 status: "Open",
-                key: 1
+                key: shortid.generate()
             },
             {
                 title: "CEO",
@@ -20,7 +21,7 @@ function Container( props ) {
                 posted: "12/30/2020",
                 sponsorship: "Sponsored",
                 status: "Paused",
-                key: 2
+                key: shortid.generate()
             },
             {
                 title: "Software Engineer",
@@ -28,17 +29,23 @@ function Container( props ) {
                 posted: "11/18/2020",
                 sponsorship: "Free",
                 status: "Closed",
-                key: 3
+                key: shortid.generate()
             }
         ]
     )
+
+    function addJob(job){
+        setJobs(jobs.push(job));
+        console.log(jobs);
+        props.history.push("/")
+    }
 
     const url = props.location.pathname;
 
     if (url === "/"){
         return <Listings jobs={ jobs }/>
     } else if (url === "/add" || url === "/edit"){
-        return <AddEdit />
+        return <AddEdit addJob={addJob}/>
     } else {
         return <NotFound />
     }

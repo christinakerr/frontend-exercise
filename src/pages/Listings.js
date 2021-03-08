@@ -1,6 +1,7 @@
 import React from 'react'
 import Button from "../components/Button"
 import Job from "../components/Job";
+import { Link } from "react-router-dom"
 
 function Listings(props) {
 
@@ -8,7 +9,7 @@ function Listings(props) {
         <main>
             <h1>Jobs</h1>
             <p>3 listings</p>
-            <Button>Add Job</Button>
+            <Link to="/add"><Button>Add Job</Button></Link>
 
             <div>Job Title</div>
             <div>Posted</div>

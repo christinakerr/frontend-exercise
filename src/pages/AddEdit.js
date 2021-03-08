@@ -1,7 +1,38 @@
 import React from 'react'
 import Button from "../components/Button"
+import {Link} from "react-router-dom"
+import shortid from 'shortid'
 
-function AddEdit() {
+function AddEdit(props) {
+
+    function submitJob(event){
+        event.preventDefault();
+        const content = event.target.form;
+        const jobObject = {
+            title: content.title.value,
+            location: content.location.value,
+            posted: getDate(),
+            sponsorship: content.sponsorship.value,
+            status: content.status.value,
+            key: shortid.generate()
+        }
+        return props.addJob(jobObject)
+    }
+
+    function getDate(){
+        const today = new Date();
+        let date = today.getDate();
+        if (today.getDate() < 10){
+            date = "0" + today.getDate()
+        }
+        let month = today.getMonth() + 1;
+        if (month < 10){
+            month = "0" + (today.getMonth() + 1)
+        }
+        return month + "-" + date + "-" + today.getFullYear()
+    }
+
+
     return (
         <main>
             <div>
@@ -38,8 +69,8 @@ function AddEdit() {
                         <option value="closed">Closed</option>
                     </select>
                     <br />
-                    <input type="submit" value="Submit"></input>
-                    <Button>Cancel</Button>
+                    <Link to="/"><input type="submit" value="Submit" onClick={submitJob}></input></Link>
+                    <Link to="/"><Button>Cancel</Button></Link>
                 </form>
             </div>
         </main>
