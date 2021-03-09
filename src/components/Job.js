@@ -5,7 +5,7 @@ import { Link } from "react-router-dom"
 function Job(props) {
 
     return (
-        <div>
+        <div data-testid="job">
             <div>{props.title}</div>
             <div>{props.location}</div>
             <div>{props.posted}</div>

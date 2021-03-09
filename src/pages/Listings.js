@@ -5,8 +5,13 @@ import { Link } from "react-router-dom"
 
 function Listings(props) {
     let jobCount = 0;
-    if (props.jobs){
+    let jobMap;
+
+    if (props.jobs) {
         jobCount = props.jobs.length
+        jobMap = props.jobs.map(job => {
+            return <Job key={job.key} id={job.key} title={job.title} location={job.location} posted={job.posted} sponsorship={job.sponsorship} status={job.status} />
+        })
     }
 
     return (
@@ -19,12 +24,11 @@ function Listings(props) {
             <div>Posted</div>
             <div>Sponsorship</div>
             <div>Status</div>
-            {
-                
-                // props.jobs.map(job => {
-                //     return <Job key={job.key} id={job.key} title={job.title} location={job.location} posted={job.posted} sponsorship={job.sponsorship} status={job.status} />
-                // })
-            }
+            <div>
+                {
+                    jobMap ? jobMap : <h4>No jobs found.</h4>
+                }
+            </div>
         </main>
     );
 }
