@@ -69,7 +69,6 @@ function AddEdit(props) {
             }
             return props.updateJob(jobObject, jobToEdit)
         }
-
     }
 
     function todaysDate() {
