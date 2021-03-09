@@ -1,7 +1,9 @@
 import React from 'react'
 import Button from "./Button"
+import { Link } from "react-router-dom"
 
 function Job(props) {
+
     return (
         <div>
             <div>{props.title}</div>
@@ -9,7 +11,7 @@ function Job(props) {
             <div>{props.posted}</div>
             <div>{props.sponsorship}</div>
             <div>{props.status}</div>
-            <Button>Edit</Button>
+            <Link to={"/edit/" + props.id}><Button>Edit</Button></Link>
         </div>
     );
 }

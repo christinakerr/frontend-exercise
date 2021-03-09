@@ -17,7 +17,7 @@ function Listings(props) {
             <div>Status</div>
             {
                 props.jobs.map(job => {
-                    return <Job key={job.key} title={job.title} location={job.location} posted={job.posted} sponsorship={job.sponsorship} status={job.status} />
+                    return <Job key={job.key} id={job.key} title={job.title} location={job.location} posted={job.posted} sponsorship={job.sponsorship} status={job.status} />
                 })
             }
         </main>

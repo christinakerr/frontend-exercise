@@ -43,7 +43,7 @@ function Container( props ) {
 
     if (url === "/"){
         return <Listings jobs={ jobs }/>
-    } else if (url === "/add" || url === "/edit"){
+    } else if (url === "/add" || url.substring(0,5) === "/edit"){
         return <AddEdit addJob={addJob}/>
     } else {
         return <NotFound />

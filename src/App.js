@@ -10,7 +10,7 @@ function App() {
       <Header />
       <Switch>
         <Route exact path="/" component={Container} />
-        <Route exact path="/edit" component={Container} />
+        <Route path="/edit/:id" component={Container} />
         <Route exact path="/add" component={Container} />
       </Switch>
     </BrowserRouter>

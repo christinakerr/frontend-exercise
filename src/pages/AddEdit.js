@@ -1,11 +1,17 @@
 import React from 'react'
 import Button from "../components/Button"
-import {Link} from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import shortid from 'shortid'
 
 function AddEdit(props) {
 
-    function submitJob(event){
+    const url = useLocation()
+    let editPage = true;
+    if (url.pathname === "/add") {
+        editPage = false;
+    }
+
+    function submitJob(event) {
         event.preventDefault();
         const content = event.target.form;
         const jobObject = {
@@ -19,14 +25,14 @@ function AddEdit(props) {
         return props.addJob(jobObject)
     }
 
-    function getDate(){
+    function getDate() {
         const today = new Date();
         let date = today.getDate();
-        if (today.getDate() < 10){
+        if (today.getDate() < 10) {
             date = "0" + today.getDate()
         }
         let month = today.getMonth() + 1;
-        if (month < 10){
+        if (month < 10) {
             month = "0" + (today.getMonth() + 1)
         }
         return month + "-" + date + "-" + today.getFullYear()
@@ -35,10 +41,18 @@ function AddEdit(props) {
 
     return (
         <main>
-            <div>
-                <h2>Add a new job</h2>
-                <h3>Fill out the information for your new job listing.</h3>
-            </div>
+            {
+                editPage ?
+                    <div>
+                        <h2>Edit job</h2>
+                        <h3>Edit the information for your job listing.</h3>
+                    </div>
+                    :
+                    <div>
+                        <h2>Add a new job</h2>
+                        <h3>Fill out the information for your new job listing.</h3>
+                    </div>
+            }
             <div>
                 <form>
                     <label htmlFor="title">
