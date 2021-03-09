@@ -10,19 +10,62 @@ function AddEdit(props) {
     if (url.pathname === "/add") {
         isEditPage = false;
     }
+    let titleValue;
+    let locationValue;
+    let sponsorshipValue;
+    let statusValue;
+    let jobToEdit;
+
+    if (isEditPage) {
+        let newUrl = url.pathname.replace("/edit/", "");
+        
+        for (let i in props.jobs) {
+            if (props.jobs[i].key === newUrl) {
+                jobToEdit = props.jobs[i];
+                break;
+            }
+        }
+
+        titleValue = {
+            defaultValue: jobToEdit.title
+        }
+        locationValue = {
+            defaultValue: jobToEdit.location
+        }
+        sponsorshipValue = {
+            defaultValue: jobToEdit.sponsorship
+        }
+        statusValue = {
+            defaultValue: jobToEdit.status
+        }
+    }
+
 
     function submitJob(event) {
         event.preventDefault();
         const content = event.target.form;
-        const jobObject = {
-            title: content.title.value,
-            location: content.location.value,
-            posted: todaysDate(),
-            sponsorship: content.sponsorship.value,
-            status: content.status.value,
-            key: shortid.generate()
+        if (!isEditPage) {
+            const jobObject = {
+                title: content.title.value,
+                location: content.location.value,
+                posted: todaysDate(),
+                sponsorship: content.sponsorship.value,
+                status: content.status.value,
+                key: shortid.generate()
+            }
+            return props.addJob(jobObject)
+        } else {
+            const jobObject = {
+                title: content.title.value,
+                location: content.location.value,
+                posted: jobToEdit.posted,
+                sponsorship: content.sponsorship.value,
+                status: content.status.value,
+                key: jobToEdit.key
+            }
+            return props.updateJob(jobObject, jobToEdit)
         }
-        return props.addJob(jobObject)
+
     }
 
     function todaysDate() {
@@ -54,7 +97,7 @@ function AddEdit(props) {
                     </div>
             }
             <div>
-                <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob}/>
+                <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob} titleValue={titleValue} locationValue={locationValue} sponsorshipValue={sponsorshipValue} statusValue={statusValue} />
             </div>
         </main>
     );

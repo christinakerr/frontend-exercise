@@ -39,12 +39,24 @@ function Container( props ) {
         props.history.push("/")
     }
 
+    function updateJob(newJob, jobToEdit){
+        const newArray = jobs.map(job => {
+            if (job===jobToEdit){
+                return newJob
+            } else {
+                return job
+            }
+        })
+        setJobs(newArray);
+        props.history.push("/")
+    }
+
     const url = props.location.pathname;
 
     if (url === "/"){
         return <Listings jobs={ jobs }/>
     } else if (url === "/add" || url.substring(0,5) === "/edit"){
-        return <AddEdit addJob={addJob} jobs={jobs}/>
+        return <AddEdit addJob={addJob} updateJob={updateJob} jobs={jobs}/>
     } else {
         return <NotFound />
     }
