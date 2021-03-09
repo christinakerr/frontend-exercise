@@ -6,9 +6,9 @@ import Form from "../components/Form"
 function AddEdit(props) {
 
     const url = useLocation()
-    let editPage = true;
+    let isEditPage = true;
     if (url.pathname === "/add") {
-        editPage = false;
+        isEditPage = false;
     }
 
     function submitJob(event) {
@@ -17,7 +17,7 @@ function AddEdit(props) {
         const jobObject = {
             title: content.title.value,
             location: content.location.value,
-            posted: getDate(),
+            posted: todaysDate(),
             sponsorship: content.sponsorship.value,
             status: content.status.value,
             key: shortid.generate()
@@ -25,7 +25,7 @@ function AddEdit(props) {
         return props.addJob(jobObject)
     }
 
-    function getDate() {
+    function todaysDate() {
         const today = new Date();
         let date = today.getDate();
         if (today.getDate() < 10) {
@@ -42,7 +42,7 @@ function AddEdit(props) {
     return (
         <main>
             {
-                editPage ?
+                isEditPage ?
                     <div>
                         <h2>Edit job</h2>
                         <h3>Edit the information for your job listing.</h3>
@@ -54,7 +54,7 @@ function AddEdit(props) {
                     </div>
             }
             <div>
-                <Form props submitJob={submitJob}/>
+                <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob}/>
             </div>
         </main>
     );
