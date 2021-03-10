@@ -11,7 +11,7 @@ function Job(props) {
             <div>{props.posted}</div>
             <div>{props.sponsorship}</div>
             <div>{props.status}</div>
-            <Link to={"/edit/" + props.id}><Button>Edit</Button></Link>
+            <Link to={"/edit/" + props.id} data-testid="edit-job-btn"><Button>Edit</Button></Link>
         </div>
     );
 }

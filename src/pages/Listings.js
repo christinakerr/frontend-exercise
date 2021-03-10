@@ -18,7 +18,7 @@ function Listings(props) {
         <main data-testid="jobs-page">
             <h1>Jobs</h1>
             <p>{jobCount} listings</p>
-            <Link to="/add"><Button>Add Job</Button></Link>
+            <Link to="/add" data-testid="add-job-btn"><Button>Add Job</Button></Link>
 
             <div>Job Title</div>
             <div>Posted</div>

@@ -43,7 +43,7 @@ function AddEdit(props) {
 
     function submitJob(event) {
         event.preventDefault();
-        const content = event.target.form;
+        const content = event.target.elements;
         if (!content.title.value.trim() || !content.location.value.trim()){
             alert("Please fill in all fields.")
             return;
@@ -90,12 +90,12 @@ function AddEdit(props) {
             {
                 isEditPage ?
                     <div>
-                        <h2>Edit job</h2>
+                        <h2 data-testid="add-edit-heading">Edit job</h2>
                         <h3>Edit the information for your job listing.</h3>
                     </div>
                     :
                     <div>
-                        <h2>Add a new job</h2>
+                        <h2 data-testid="add-edit-heading">Add a new job</h2>
                         <h3>Fill out the information for your new job listing.</h3>
                     </div>
             }

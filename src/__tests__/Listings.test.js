@@ -1,9 +1,10 @@
 import jobList from "./jobList.json"
 import Listings from '../pages/Listings';
-import { render } from '@testing-library/react'
+import { render, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
 
+afterEach(cleanup)
 
 
 test('<Listings /> renders', () => {
