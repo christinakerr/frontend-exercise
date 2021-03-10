@@ -44,6 +44,7 @@ function AddEdit(props) {
     function submitJob(event) {
         event.preventDefault();
         const content = event.target.elements;
+        console.log(content)
         if (!content.title.value.trim() || !content.location.value.trim()){
             alert("Please fill in all fields.")
             return;
