@@ -1,7 +1,7 @@
 .listings-title {
     display: flex;
     align-items: flex-end;
-    font-family: Noto Sans, Verdana, Geneva, Tahoma, sans-serif;
+    font-family: Noto Sans, sans-serif;
     justify-content: space-between;
     margin-top: 80px;
 }
