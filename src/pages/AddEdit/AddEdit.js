@@ -19,7 +19,7 @@ function AddEdit(props) {
 
     if (isEditPage) {
         let newUrl = url.pathname.replace("/edit/", "");
-        
+
         for (let i in props.jobs) {
             if (props.jobs[i].key === newUrl) {
                 jobToEdit = props.jobs[i];
@@ -47,7 +47,7 @@ function AddEdit(props) {
         const content = event.target.elements;
         console.log("Content: ")
         console.log(content)
-        if (!content.title.value.trim() || !content.location.value.trim()){
+        if (!content.title.value.trim() || !content.location.value.trim()) {
             alert("Please fill in all fields.")
             return;
         }
@@ -90,20 +90,23 @@ function AddEdit(props) {
 
     return (
         <main>
-            {
-                isEditPage ?
-                    <div>
-                        <h2 data-testid="add-edit-heading">Edit job</h2>
-                        <h3>Edit the information for your job listing.</h3>
-                    </div>
-                    :
-                    <div>
-                        <h2 data-testid="add-edit-heading">Add a new job</h2>
-                        <h3>Fill out the information for your new job listing.</h3>
-                    </div>
-            }
-            <div>
-                <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob} titleValue={titleValue} locationValue={locationValue} sponsorshipValue={sponsorshipValue} statusValue={statusValue} />
+            <div className="add-edit-container">
+                {
+                    isEditPage ?
+                        <div>
+                            <h2 data-testid="add-edit-heading">Edit job</h2>
+                            <h3>Edit the information for your job listing.</h3>
+                        </div>
+                        :
+                        <div>
+                            <h2 data-testid="add-edit-heading">Add a new job</h2>
+                            <h3>Fill out the information for your new job listing.</h3>
+                        </div>
+                }
+                <hr className="hr" />
+                <div>
+                    <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob} titleValue={titleValue} locationValue={locationValue} sponsorshipValue={sponsorshipValue} statusValue={statusValue} />
+                </div>
             </div>
         </main>
     );
