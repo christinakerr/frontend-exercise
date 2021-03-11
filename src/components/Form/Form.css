@@ -25,6 +25,9 @@ p {
     padding: 12px 10px;
     width: 288px;
     margin-top: 0px;
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    color: #2D2D2D;
 }
 
 ::placeholder {
@@ -38,4 +41,13 @@ select {
     font-size: 16px;
     line-height: 150%;
     color: #2D2D2D;
+}
+
+.form-btn {
+    margin: 16px 8px 0 0;
+}
+
+.btn-row {
+    display: flex;
+    justify-content: flex-end;
 }

@@ -1,6 +1,6 @@
 import React from 'react'
 import Button from "../Button"
-import {Link } from "react-router-dom"
+import { Link } from "react-router-dom"
 import "./Form.css"
 
 function Form(props) {
@@ -34,9 +34,11 @@ function Form(props) {
                 <option data-testid="opt-paused" value="Paused">Paused</option>
                 <option value="Closed">Closed</option>
             </select>
-            <br />
-            <input type="submit" value="Submit" data-testid="submit-btn"></input>
-            <Link to="/" data-testid="cancel-btn"><Button>Cancel</Button></Link>
+            <hr className="hr" />
+            <div className="btn-row">
+                <Link to="/" data-testid="cancel-btn"><button className="btn-secondary form-btn">Cancel</button></Link>
+                <input type="submit" value="Add Job" className="btn-primary form-btn" data-testid="submit-btn"></input>
+            </div>
         </form>
     );
 }
