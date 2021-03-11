@@ -1,5 +1,5 @@
 import jobList from "./jobList.json"
-import { render, wrapper } from '@testing-library/react'
+import { render } from '@testing-library/react'
 import userEvent from '@testing-library/user-event'
 import '@testing-library/jest-dom';
 import { Router } from 'react-router-dom';
@@ -22,8 +22,15 @@ test("<AddEdit /> renders heading for /edit page", () => {
     
 })
 
-// test("<AddEdit /> form contains existing job values", () => {
-//     const { getByTestId, debug } = render(<Router history={history}><Form jobs={nestedJobList}/></Router>);
-//     expect(getByTestId("input-title").value).toBe(jobList[0].title);
-//     expect(getByTestId("input-location").value).toBe(jobList[0].location);
-// })
+test("<AddEdit /> form contains existing job values", () => {
+    const { getByTestId,} = render(<Router history={history}><Form 
+        titleValue={{defaultValue: jobList[0].title}} 
+        locationValue={{defaultValue: jobList[0].location}}
+        sponsorshipValue={{defaultValue: jobList[0].sponsorship}}
+        statusValue={{defaultValue: jobList[0].status}}
+        /></Router>);
+    expect(getByTestId("input-title").value).toBe(jobList[0].title);
+    expect(getByTestId("input-location").value).toBe(jobList[0].location);
+    expect(getByTestId("input-sponsorship").value).toBe(jobList[0].sponsorship);
+    expect(getByTestId("input-status").value).toBe(jobList[0].status);
+})

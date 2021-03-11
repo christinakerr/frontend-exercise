@@ -3,23 +3,23 @@
         "key": 1,
         "location": "",
         "posted": "",
-        "sponsorship": "",
-        "status": "",
+        "sponsorship": "Sponsored",
+        "status": "Open",
         "title": "job 1"
     },
     {
         "key": 2,
         "location": "",
         "posted": "",
-        "sponsorship": "",
-        "status": "",
+        "sponsorship": "Free",
+        "status": "Closed",
         "title": "job 2"
     },
     {
         "key": 3,
         "location": "",
-        "posted": "",
-        "sponsorship": "",
+        "posted": "Paused",
+        "sponsorship": "Free",
         "status": "",
         "title": "job 3"
     }
