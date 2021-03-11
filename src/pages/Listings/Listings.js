@@ -24,11 +24,11 @@ function Listings(props) {
                 <Link to="/add" data-testid="add-job-btn"><button className="btn-primary">Add Job</button></Link>
             </div>
             <div className="job-grid">
-                <div id="title-col-head">Job Title</div>
-                <div>Posted</div>
-                <div>Sponsorship</div>
-                <div>Status</div>
-                <div></div>
+                <div id="title-col-head" className="col-head">Job Title</div>
+                <div className="col-head">Posted</div>
+                <div className="col-head">Sponsorship</div>
+                <div className="col-head">Status</div>
+                <div className="col-head"></div>
                 <div>
                     {
                         jobMap ? jobMap : <h4>No jobs found.</h4>
