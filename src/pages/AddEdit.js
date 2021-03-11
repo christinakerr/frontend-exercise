@@ -83,7 +83,7 @@ function AddEdit(props) {
         if (month < 10) {
             month = "0" + (today.getMonth() + 1)
         }
-        return month + "-" + date + "-" + today.getFullYear()
+        return month + "/" + date + "/" + today.getFullYear()
     }
 
 
