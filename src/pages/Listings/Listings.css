@@ -1,0 +1,20 @@
+.listings-title {
+    display: flex;
+    background-color: purple;
+    align-items: center;
+    font-family: Noto Sans, Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.listings-title h1 {
+    font-weight: bold;
+    font-size: 28px;
+    line-height: 125%;
+    color: #2D2D2D;
+}
+
+.listings-title p {
+    font-size: 14px;
+    line-height: 150%;
+    color: #949494;
+}
+

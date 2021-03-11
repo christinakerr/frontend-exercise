@@ -53,3 +53,16 @@ main, header {
     max-width: 1320px;
   }
 }
+
+.btn-primary { 
+padding: 13px 16px;
+background: #085FF7;
+border-radius: 8px;
+font-family: Helvetica Neue;
+font-style: normal;
+font-weight: bold;
+font-size: 16px;
+line-height: 112.5%;
+color: #FFFFFF;
+border-style: none;
+}

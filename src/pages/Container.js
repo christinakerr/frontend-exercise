@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Listings from "./Listings";
+import Listings from "./Listings/Listings";
 import AddEdit from "./AddEdit";
 import NotFound from "./NotFound"
 import shortid from "shortid"

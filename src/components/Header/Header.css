@@ -11,10 +11,6 @@ header {
     height: 64px;
 }
 
-.user {
-    display: inline;
-}
-
 header img {
     border-radius: 25px;
     height: 36px;

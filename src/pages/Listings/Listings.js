@@ -1,7 +1,7 @@
 import React from 'react'
-import Button from "../components/Button"
-import Job from "../components/Job";
+import Job from "../../components/Job";
 import { Link } from "react-router-dom"
+import "./Listings.css"
 
 function Listings(props) {
     let jobCount = 0;
@@ -16,10 +16,11 @@ function Listings(props) {
 
     return (
         <main data-testid="jobs-page">
-            <h1>Jobs</h1>
-            <p>{jobCount} listings</p>
-            <Link to="/add" data-testid="add-job-btn"><Button>Add Job</Button></Link>
-
+            <div className="listings-title">
+                <h1>Jobs</h1>
+                <p>{jobCount} listings</p>
+                <Link to="/add" data-testid="add-job-btn"><button className="btn-primary">Add Job</button></Link>
+            </div>
             <div>Job Title</div>
             <div>Posted</div>
             <div>Sponsorship</div>

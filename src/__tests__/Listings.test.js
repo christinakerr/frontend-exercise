@@ -1,5 +1,5 @@
 import jobList from "./jobList.json"
-import Listings from '../pages/Listings';
+import Listings from '../pages/Listings/Listings';
 import { render, cleanup } from '@testing-library/react'
 import '@testing-library/jest-dom';
 import { MemoryRouter } from 'react-router-dom';
