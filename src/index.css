@@ -6,3 +6,50 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
+
+main, header {
+  margin: 0 auto;
+  background-color: purple;
+}
+
+@media (min-width: 320px) {
+  main, header {
+    max-width: 310px;
+  }
+}
+
+@media (min-width: 425px) {
+  main, header {
+    max-width: 400px;
+  }
+}
+
+@media (min-width: 576px) {
+  main, header {
+    max-width: 540px;
+  }
+}
+
+@media (min-width: 768px) {
+  main, header {
+    max-width: 720px;
+  }
+}
+
+@media (min-width: 992px) {
+  main, header {
+    max-width: 960px;
+  }
+}
+
+@media (min-width: 1200px) {
+  main, header {
+    max-width: 1140px;
+  }
+}
+
+@media (min-width: 1400px) {
+  main, header {
+    max-width: 1320px;
+  }
+}
