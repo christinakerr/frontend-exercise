@@ -25,9 +25,9 @@ function Listings(props) {
             </div>
             <div className="job-grid">
                 <div id="title-col-head" className="col-head">Job Title</div>
-                <div className="col-head center">Posted</div>
-                <div className="col-head center">Sponsorship</div>
-                <div className="col-head center">Status</div>
+                <div className="col-head center job-item-mobile">Posted</div>
+                <div className="col-head center job-item-mobile">Sponsorship</div>
+                <div className="col-head center job-item-mobile">Status</div>
                 <div className="col-head"></div>
             </div>
             <div>

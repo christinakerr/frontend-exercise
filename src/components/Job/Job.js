@@ -10,10 +10,10 @@ function Job(props) {
                 <div className="job-item">{props.title}</div>
                 <div className="job-location">{props.location}</div>
             </div>
-            <div className="center job-item">{props.posted}</div>
-            <div className="center job-item">{props.sponsorship}</div>
-            <div className="center job-item">{props.status}</div>
-            <Link to={"/edit/" + props.id} data-testid="edit-job-btn" className="right"><button className="btn-secondary">Edit</button></Link>
+            <div className="center job-item job-item-mobile"><span className="mobile-only">Posted: </span>{props.posted}</div>
+            <div className="center job-item job-item-mobile"><span className="mobile-only">Sponsorship: </span>{props.sponsorship}</div>
+            <div className="center job-item job-item-mobile"><span className="mobile-only">Status: </span>{props.status}</div>
+            <Link to={"/edit/" + props.id} data-testid="edit-job-btn" className="right edit-btn-mobile"><button className="btn-secondary">Edit</button></Link>
         </div>
     );
 }

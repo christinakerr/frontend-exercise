@@ -102,3 +102,38 @@ main, header {
 .right {
   justify-self: right;
 }
+
+.mobile-only {
+  display: none;
+}
+
+@media (max-width: 576px) {
+  .job-grid {
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 1fr 1fr 1fr;
+  }
+  .job-title-col {
+    grid-column: 1 / 2;
+  }
+  #title-col-head {
+    grid-column: 1 / 2;
+  }
+  .job-item-mobile {
+    grid-column: 2 / 3;
+  }
+  .edit-btn-mobile {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+    justify-self: left;
+  }
+  .mobile-only {
+    display: inline;
+    color: #949494;
+  }
+  .col-head {
+    display: none;
+  }
+  #title, #location, select {
+    width: 100% !important;
+  }
+}
