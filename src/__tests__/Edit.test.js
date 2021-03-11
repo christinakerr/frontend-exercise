@@ -6,7 +6,6 @@ import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history'
 import App from "../App"
 import Form from "../components/Form"
-import AddEdit from "../pages/AddEdit"
 
 const history = createMemoryHistory();
 

@@ -5,8 +5,6 @@ import Form from "../components/Form"
 
 function AddEdit(props) {
 
-    
-
     const url = useLocation()
     let isEditPage = true;
     if (url.pathname === "/add") {
@@ -46,6 +44,7 @@ function AddEdit(props) {
     function submitJob(event) {
         event.preventDefault();
         const content = event.target.elements;
+        console.log("Content: ")
         console.log(content)
         if (!content.title.value.trim() || !content.location.value.trim()){
             alert("Please fill in all fields.")
