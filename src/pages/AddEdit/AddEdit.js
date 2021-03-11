@@ -1,7 +1,7 @@
 import React from 'react'
 import { useLocation } from "react-router-dom"
 import shortid from 'shortid'
-import Form from "../../components/Form"
+import Form from "../../components/Form/Form"
 import "./AddEdit.css"
 
 function AddEdit(props) {

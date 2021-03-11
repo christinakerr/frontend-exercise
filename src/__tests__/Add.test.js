@@ -5,7 +5,7 @@ import '@testing-library/jest-dom';
 import { Router } from 'react-router-dom';
 import { createMemoryHistory } from 'history'
 import App from "../App"
-import Form from "../components/Form"
+import Form from "../components/Form/Form"
 
 const submitJob = jest.fn()
 

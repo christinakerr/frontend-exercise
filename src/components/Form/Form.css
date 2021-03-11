@@ -1,0 +1,41 @@
+h4 {
+    font-family: Helvetica Neue;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2D2D2D;
+    margin-bottom: 0px;
+}
+
+p {
+    font-family: Helvetica Neue;
+    font-size: 14px;
+    line-height: 150%;
+    margin-top: 0px;
+    color: #767676;
+    margin-bottom: 4px;
+}
+
+#title, #location, select {
+    background: #FFFFFF;
+    border: 1px solid #949494;
+    box-sizing: border-box;
+    border-radius: 8px;
+    padding: 12px 10px;
+    width: 288px;
+    margin-top: 0px;
+}
+
+::placeholder {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    color: #767676;
+}
+
+select {
+    font-family: Helvetica Neue;
+    font-size: 16px;
+    line-height: 150%;
+    color: #2D2D2D;
+}
