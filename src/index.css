@@ -5,11 +5,11 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: #E5E5E5;
 }
 
 main, header {
   margin: 0 auto;
-  background-color: purple;
 }
 
 @media (min-width: 320px) {
