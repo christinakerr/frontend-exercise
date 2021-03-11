@@ -1,6 +1,6 @@
 import jobList from "./jobList.json"
 import '@testing-library/jest-dom';
-import AddEdit from "../pages/AddEdit";
+import AddEdit from "../pages/AddEdit/AddEdit";
 import { renderHook, act } from '@testing-library/react-hooks'
 
 jest.mock("react-router-dom", () => ({

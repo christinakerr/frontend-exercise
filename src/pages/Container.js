@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import Listings from "./Listings/Listings";
-import AddEdit from "./AddEdit";
+import AddEdit from "./AddEdit/AddEdit";
 import NotFound from "./NotFound"
 import shortid from "shortid"
 
