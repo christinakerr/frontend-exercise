@@ -17,8 +17,10 @@ function Listings(props) {
     return (
         <main data-testid="jobs-page">
             <div className="listings-title">
+                <div>
                 <h1>Jobs</h1>
                 <p>{jobCount} listings</p>
+                </div>
                 <Link to="/add" data-testid="add-job-btn"><button className="btn-primary">Add Job</button></Link>
             </div>
             <div>Job Title</div>
