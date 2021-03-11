@@ -67,11 +67,38 @@ main, header {
   border-style: none;
 }
 
+.btn-secondary {
+  background: #FFFFFF;
+  border: 1px solid #D4D2D0;
+  box-sizing: border-box;
+  border-radius: 8px;
+  padding: 13px 16px;
+  font-family: Helvetica Neue;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 112.5%;
+  color: #085FF7;
+}
+
 .job-grid {
   display: grid;
   grid-template-columns: 40% 15% 18% 15% auto;
+  align-items: center;
 }
 
 #title-col-head {
   grid-column: 1 / 2;
+}
+
+.job-title-col {
+    grid-column: 1 / 2;
+}
+
+.center {
+  justify-self: center;
+}
+
+.right {
+  justify-self: right;
 }

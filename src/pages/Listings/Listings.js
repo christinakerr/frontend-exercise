@@ -25,16 +25,17 @@ function Listings(props) {
             </div>
             <div className="job-grid">
                 <div id="title-col-head" className="col-head">Job Title</div>
-                <div className="col-head">Posted</div>
-                <div className="col-head">Sponsorship</div>
-                <div className="col-head">Status</div>
+                <div className="col-head center">Posted</div>
+                <div className="col-head center">Sponsorship</div>
+                <div className="col-head center">Status</div>
                 <div className="col-head"></div>
-                <div>
-                    {
-                        jobMap ? jobMap : <h4>No jobs found.</h4>
-                    }
-                </div>
             </div>
+            <div>
+                {
+                    jobMap ? jobMap : <h4>No jobs found.</h4>
+                }
+            </div>
+
         </main>
     );
 }
