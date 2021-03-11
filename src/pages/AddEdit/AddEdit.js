@@ -15,9 +15,11 @@ function AddEdit(props) {
     let locationValue;
     let sponsorshipValue;
     let statusValue;
+    let submitValue = "Add job"
     let jobToEdit;
 
     if (isEditPage) {
+        submitValue = "Save";
         let newUrl = url.pathname.replace("/edit/", "");
 
         for (let i in props.jobs) {
@@ -39,6 +41,7 @@ function AddEdit(props) {
         statusValue = {
             defaultValue: jobToEdit.status
         }
+        
     }
 
 
@@ -105,7 +108,7 @@ function AddEdit(props) {
                 }
                 <hr className="hr" />
                 <div>
-                    <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob} titleValue={titleValue} locationValue={locationValue} sponsorshipValue={sponsorshipValue} statusValue={statusValue} />
+                    <Form jobs={props.jobs} isEditPage={isEditPage} submitJob={submitJob} titleValue={titleValue} locationValue={locationValue} sponsorshipValue={sponsorshipValue} statusValue={statusValue} submitValue={submitValue} />
                 </div>
             </div>
         </main>
