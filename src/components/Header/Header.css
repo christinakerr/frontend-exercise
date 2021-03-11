@@ -2,25 +2,35 @@
     background-color: #2D2D2D;
 }
 
-.user {
+header {
     display: flex;
     font-family: Helvetica Neue;
     color: #FAF9F8;
-    
+    align-items: center;
+    justify-content: flex-end;
+    height: 64px;
+}
+
+.user {
+    display: inline;
 }
 
 header img {
     border-radius: 25px;
+    height: 36px;
+    margin: 8px;
 }
 
 header h4 {
     font-weight: bold;
     font-size: 16px;
     line-height: 150%;
+    margin: 0;
 }
 
-header h5 {
+header h6 {
     font-weight: normal;
     font-size: 12px;
     line-height: 150%;
+    margin: 0;
 }
