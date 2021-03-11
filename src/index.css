@@ -66,3 +66,12 @@ main, header {
   color: #FFFFFF;
   border-style: none;
 }
+
+.job-grid {
+  display: grid;
+  grid-template-columns: 40% 15% 18% 15% auto;
+}
+
+#title-col-head {
+  grid-column: 1 / 2;
+}
