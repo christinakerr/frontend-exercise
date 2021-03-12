@@ -36,7 +36,7 @@ function Form(props) {
             <hr className="hr" />
             <div className="btn-row">
                 <Link to="/" data-testid="cancel-btn" className="btn-secondary form-btn">Cancel</Link>
-                <input type="submit" value={props.submitValue} className="btn-primary form-btn" data-testid="submit-btn"></input>
+                <input type="submit" value={props.submitValue} className="btn-primary form-btn submit-btn" data-testid="submit-btn"></input>
             </div>
         </form>
     );

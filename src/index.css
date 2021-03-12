@@ -16,6 +16,10 @@ a {
   text-decoration: none;
 }
 
+a:hover, .submit-btn:hover {
+  text-decoration: underline;
+}
+
 @media (min-width: 320px) {
   main, header {
     max-width: 310px;
