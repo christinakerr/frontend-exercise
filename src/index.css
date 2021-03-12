@@ -20,6 +20,10 @@ a:hover, .submit-btn:hover {
   text-decoration: underline;
 }
 
+*:focus {
+  box-shadow: 3px 3px 20px -6px #000000;
+}
+
 @media (min-width: 320px) {
   main, header {
     max-width: 310px;
