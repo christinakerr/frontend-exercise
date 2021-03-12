@@ -12,6 +12,10 @@ main, header {
   margin: 0 auto;
 }
 
+a {
+  text-decoration: none;
+}
+
 @media (min-width: 320px) {
   main, header {
     max-width: 310px;

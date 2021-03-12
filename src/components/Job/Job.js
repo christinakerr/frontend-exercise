@@ -13,7 +13,7 @@ function Job(props) {
             <div className="center job-item job-item-mobile"><span className="mobile-only">Posted: </span>{props.posted}</div>
             <div className="center job-item job-item-mobile"><span className="mobile-only">Sponsorship: </span>{props.sponsorship}</div>
             <div className="center job-item job-item-mobile"><span className="mobile-only">Status: </span>{props.status}</div>
-            <Link to={"/edit/" + props.id} data-testid="edit-job-btn" className="right edit-btn-mobile"><button className="btn-secondary">Edit</button></Link>
+            <Link to={"/edit/" + props.id} data-testid="edit-job-btn" className="right edit-btn-mobile btn-secondary">Edit</Link>
         </div>
     );
 }

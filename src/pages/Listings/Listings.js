@@ -21,7 +21,7 @@ function Listings(props) {
                     <h1>Jobs</h1>
                     <p>{jobCount} listings</p>
                 </div>
-                <Link to="/add" data-testid="add-job-btn"><button className="btn-primary">Add Job</button></Link>
+                <Link to="/add" data-testid="add-job-btn" className="btn-primary">Add Job</Link>
             </div>
             <div className="job-grid">
                 <div id="title-col-head" className="col-head">Job Title</div>
