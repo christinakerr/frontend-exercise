@@ -16,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-a:hover, .submit-btn:hover {
+a:hover, a:focus, .submit-btn:hover {
   text-decoration: underline;
 }
 
