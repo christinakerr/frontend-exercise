@@ -97,13 +97,13 @@ function AddEdit(props) {
                 {
                     isEditPage ?
                         <div>
-                            <h2 data-testid="add-edit-heading">Edit job</h2>
-                            <h3>Edit the information for your job listing.</h3>
+                            <h1 data-testid="add-edit-heading">Edit job</h1>
+                            <h2>Edit the information for your job listing.</h2>
                         </div>
                         :
                         <div>
-                            <h2 data-testid="add-edit-heading">Add a new job</h2>
-                            <h3>Fill out the information for your new job listing.</h3>
+                            <h1 data-testid="add-edit-heading">Add a new job</h1>
+                            <h2>Fill out the information for your new job listing.</h2>
                         </div>
                 }
                 <hr className="hr" />
