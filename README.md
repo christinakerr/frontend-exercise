@@ -2,6 +2,8 @@
 
 ## Deployed
 
+[Access the deployed app here.](https://christinakerr.github.io/frontend-exercise/)
+
 ## About
 
 This is a project assigned to me as part of a job interview process. I received a wireframe and instructions to create a CRUD application in React, without the delete functionality.
@@ -17,6 +19,16 @@ I thoroughly enjoyed this project, especially the JavaScript CRUD logic and the 
 * editJob should replace the old version of the job with the new one and assign the new array to the jobs state variable
 
 ## Instructions for Use
+
+[Click here to open the deployed app.](https://christinakerr.github.io/frontend-exercise/)
+
+Or run the app locally:
+
+1. `git clone https://github.com/christinakerr/frontend-exercise.git`
+2. `cd` into the directory.
+3. `npm i` to install dependencies.
+4. `npm start` to run the app.
+5. Visit [localhost:3000](localhost:3000/) in your browser.
 
 ### Adding a job
 
