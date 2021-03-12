@@ -2,7 +2,7 @@
   "name": "client",
   "version": "0.1.0",
   "private": true,
-  "homepage": "https://christinakerr.github.io/frontend-exercise/",
+  "homepage": "https://christinakerr.github.io/frontend-exercise",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.9",
     "@testing-library/react": "^11.2.5",

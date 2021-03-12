@@ -7,7 +7,7 @@ import NotFound from "./pages/NotFound"
 function App() {
 
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/frontend-exercise">
       <Header />
       <Switch>
         <Route exact path="/" component={Container} />
