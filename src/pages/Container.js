@@ -38,6 +38,7 @@ function Container( props ) {
     function addJob(job){
         setJobs(jobs.concat(job));
         props.history.push("/")
+        alert("Job successfully added.")
     }
 
     function updateJob(newJob, jobToEdit){
@@ -50,6 +51,7 @@ function Container( props ) {
         })
         setJobs(newArray);
         props.history.push("/")
+        alert("Job successfully edited.")
     }
 
     const url = props.location.pathname;
